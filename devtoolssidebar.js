@@ -27,7 +27,19 @@ function render(){
         node = shallowCopy(node);
         if(!node.component){
             var nc = findParentWithComponent(node);
-            node.___nearestComponent = nc ? nc.component: undefined;
+            if(nc){
+                node.___parentNodeWithComponent = nc;
+                var name = nc.component.id;
+                if(!name){
+                    for(var fn in nc.component){
+                        if(nc.component[fn].prototype){
+                            name = nc.component[fn].prototype;
+                            break;
+                        }
+                    }
+                }
+                node.___parentComponentName = name;
+            }
         }
         
         return node;
@@ -35,7 +47,6 @@ function render(){
     
     return getBobrilNode();
 }
-
 
 chrome.devtools.panels.elements.createSidebarPane("Bobril",
   function(sidebar) {
