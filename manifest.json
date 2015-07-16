@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "Clouseau",
-    "version": "0.3",
+    "version": "0.2",
     "description": "Bobril inspector",
     "devtools_page": "devtoolsbackground.html",
     "minimum_chrome_version": "38.0",
