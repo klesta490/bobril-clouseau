@@ -10,6 +10,7 @@ function render(){
         return r;
     }
     function findParentWithComponent(node){
+        node = node.parent;
         while(node && !node.component){
             node = node.parent;
         }
@@ -25,21 +26,20 @@ function render(){
         if(!node)
             return undefined;
         node = shallowCopy(node);
-        if(!node.component){
-            var nc = findParentWithComponent(node);
-            if(nc){
-                node.___parentNodeWithComponent = nc;
-                var name = nc.component.id;
-                if(!name){
-                    for(var fn in nc.component){
-                        if(nc.component[fn].prototype){
-                            name = nc.component[fn].prototype;
-                            break;
-                        }
+        
+        var nc = findParentWithComponent(node);
+        if(nc){
+            node.___parentNodeWithComponent = nc;
+            var name = nc.component.id;
+            if(!name){
+                for(var fn in nc.component){
+                    if(nc.component[fn].prototype){
+                        name = nc.component[fn].prototype;
+                        break;
                     }
                 }
-                node.___parentComponentName = name;
             }
+            node.___parentComponentName = name;
         }
         
         return node;
