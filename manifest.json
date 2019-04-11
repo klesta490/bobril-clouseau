@@ -1,8 +1,10 @@
 {
     "manifest_version": 2,
-    "name": "Clouseau",
+    "name": "Clouseau - Bobril inspector",
+	"short_name": "Clouseau",
     "version": "0.2",
-    "description": "Bobril inspector",
+    "description": "Bobril inspector - inspects DOM",
+	"default_locale": "en",
     "devtools_page": "devtoolsbackground.html",
     "minimum_chrome_version": "38.0",
     "permissions": ["tabs"],
