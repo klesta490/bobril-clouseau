@@ -5,7 +5,7 @@
     "version": "0.2.2",
     "description": "Bobril inspector - inspects DOM",
     "devtools_page": "devtoolsbackground.html",
-    "minimum_chrome_version": "38.0",
+    "minimum_chrome_version": "88.0",
     "permissions": ["tabs"],
     "author": "Vladimír Kleštinec",
     "icons": { "16": "icon16.png",
