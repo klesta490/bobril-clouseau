@@ -1,13 +1,13 @@
 {
-    "manifest_version": 2,
+    "manifest_version": 3,
     "name": "Clouseau - Bobril inspector",
-	"short_name": "Clouseau",
+    "short_name": "Clouseau",
     "version": "0.2.1",
     "description": "Bobril inspector - inspects DOM",
     "devtools_page": "devtoolsbackground.html",
     "minimum_chrome_version": "38.0",
     "permissions": ["tabs"],
-    "author": "Vladimir Klestinec",
+    "author": "Vladimír Kleštinec",
     "icons": { "16": "icon16.png",
                "48": "icon48.png",
               "128": "icon128.png" }
